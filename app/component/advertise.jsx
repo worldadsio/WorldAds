@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 export default function Advertise() {
   const [precision, setPrecision] = useState(false);
   const precisionOpen = () => {
@@ -24,7 +25,7 @@ export default function Advertise() {
     <div className="">
       <div
         id="advertise"
-        className="xl:pl-32 2xl:pl-40   lg:flex lg:mt-48 mt-32 w-full background gap-24"
+        className="lg:pl-32 2xl:pl-40  lg:flex lg:mt-48 mt-32 w-full background gap-24"
       >
         <div className="-mt-14">
           <Image
@@ -32,7 +33,7 @@ export default function Advertise() {
             alt="advertisment"
             width={400}
             height={600}
-            className="rounded-[50%] border-2 border-red-800 p-3"
+            className="rounded-[50%] border-2 lg:mx-0 mx-auto  border-red-800 p-3"
           />
           {/* <Image src="/Group 25.png" alt="image" width={226} height={426} className="lg:w-[526px] lg:h-[726px] 2xl:w-[650px] 2xl:h-[926px]  lg:mx-0 mx-auto" /> */}
         </div>
@@ -135,11 +136,13 @@ export default function Advertise() {
               )}
             </div>
             <hr className="border lg:border-[#7E7E7E33]  border-[#FC3603] lg:w-80 w-60 lg:mx-0 mx-auto my-5" />
-            <div className="border border-gray-300 xl:mt-14 mt-10 rounded-full lg:mx-0 mx-auto  xl:w-44 w-36 ">
-              <button className="text-center text-sm border xl:p-3 md:p-3 p-2 rounded-full  xl:w-[164px] w-[133px] font-medium m-1 border-[#181818]">
-                Join waitlist
-              </button>
-            </div>
+            <Link href="https://www.google.com/forms/about/">
+              <div className="border border-gray-300 xl:mt-14 mt-10 rounded-full lg:mx-0 mx-auto  xl:w-44 w-36 ">
+                <button className="text-center text-sm border xl:p-3 md:p-3 p-2 rounded-full  xl:w-[164px] w-[133px] font-medium m-1 border-[#181818]">
+                  Join waitlist
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

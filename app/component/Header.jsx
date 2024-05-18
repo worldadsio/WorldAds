@@ -48,7 +48,7 @@ const Header = () => {
     };
 
     return (
-        <div className={`fixed w-full z-40 ${isHeaderFixed ? 'bg-red-600 py-5 lg:p-5' : 'bg-transparent py-10 lg:p-10'}`}>
+        <div className={`fixed w-full z-40 top-0  bg-[#BF2506] py-6 lg:p-7`}>
             <div className="relative w-[85%] mx-auto flex justify-between items-center bg-transparent">
                 <img src="./assets/images/logo.png" alt="Logo" className="lg:w-52 lg:h-12 w-36 h-8" />
                 <button

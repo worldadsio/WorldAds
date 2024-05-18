@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -10,7 +11,7 @@ export default function Footer() {
     const router = useRouter();
 
     function goToPage(path) {
-        router.push(`pages/${path}`);
+        router.push(`${path}`);
     }
 
     return (
@@ -21,23 +22,21 @@ export default function Footer() {
                 </div>
                 <div className="lg:flex text-white lg:mt-0 mt-10 items-center gap-10">
                     <div>
-                        <ul className="text-lg lg:text-start text-center space-y-3">
-                            <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/blogs")}><MdOutlineArticle />Blog</li>
-                            <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/contact")}><FaPhone className="text-sm" />
-                                Contact Us</li>
-                        </ul>
-                    </div>
-                    <div>
                         <ul className="text-lg lg:mt-0 mt-3  lg:text-start text-center space-y-3">
-                            <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/privacy")}><MdOutlinePolicy />Privacy Policy</li>
-                            <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/services")}><MdOutlineContactPage />
+                        <Link href="https://worldadsio.medium.com/">
+                                <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/blogs")}><MdOutlineArticle />Blog</li>
+
+                            </Link>
+                            <Link href="/privacy">
+                                <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/privacy")}><MdOutlinePolicy />Privacy Policy</li>
+
+                            </Link>
+                            <Link href="/terms">
+                            <li className="hover:text-gray-300 justify-center lg:justify-start cursor-pointer flex items-center gap-2" onClick={() => goToPage("/terms")}><MdOutlineContactPage />
                                 Terms Of Service</li>
+                            </Link>
                         </ul>
-
-
                     </div>
-
-
                 </div>
             </div>
             <div className="text-white relative mx-auto mt-5 lg:w-[80%]">
