@@ -136,7 +136,7 @@ export default function Advertise() {
               )}
             </div>
             <hr className="border lg:border-[#7E7E7E33]  border-[#FC3603] lg:w-80 w-60 lg:mx-0 mx-auto my-5" />
-            <Link href="https://www.google.com/forms/about/">
+            <Link href="https://forms.gle/yZKegGmN9f1VNRc67">
               <div className="border border-gray-300 xl:mt-14 mt-10 rounded-full lg:mx-0 mx-auto  xl:w-44 w-36 ">
                 <button className="text-center text-sm border xl:p-3 md:p-3 p-2 rounded-full  xl:w-[164px] w-[133px] font-medium m-1 border-[#181818]">
                   Join waitlist
